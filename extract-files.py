@@ -31,6 +31,13 @@ lib_fixups: lib_fixups_user_type = {
 
 blob_fixups: blob_fixups_user_type = {
     (
+        'vendor/etc/libnfc-SN220-UICC.conf',
+        'vendor/etc/libnfc-nci_SN220.conf',
+    ): blob_fixup()
+        .regex_replace('NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'),
+    'vendor/etc/libnfc-SN220-UICC.conf': blob_fixup()
+        .regex_replace('(NXPLOG_.*_LOGLEVEL)=0x04', '\\1=0x02'),
+    (
         'vendor/lib64/camera/components/com.qti.node.dewarp.so',
         'vendor/lib64/camera/components/com.vidhance.node.ica.so',
         'vendor/lib64/camera/components/com.vidhance.node.processing.so',
