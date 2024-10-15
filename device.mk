@@ -130,5 +130,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# UFFD GC
+PRODUCT_ENABLE_UFFD_GC := true
+
 # Inherit the proprietary files
 #$(call inherit-product, vendor/motorola/fogo/fogo-vendor.mk)
