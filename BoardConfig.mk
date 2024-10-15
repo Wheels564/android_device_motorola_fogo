@@ -106,4 +106,4 @@ BOARD_AVB_VENDOR_BOOT_ROLLBACK_INDEX_LOCATION := 1
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Inherit the proprietary files
-include vendor/motorola/fogo/BoardConfigVendor.mk
+#include vendor/motorola/fogo/BoardConfigVendor.mk
