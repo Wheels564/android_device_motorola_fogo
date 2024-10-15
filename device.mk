@@ -37,7 +37,7 @@ PRODUCT_PACKAGES += \
     otapreopt_script
 
 # API levels
-BOARD_API_LEVEL := 30
+#BOARD_API_LEVEL := 30
 PRODUCT_SHIPPING_API_LEVEL := 34
 
 # fastbootd
@@ -131,4 +131,4 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/motorola/fogo/fogo-vendor.mk)
+#$(call inherit-product, vendor/motorola/fogo/fogo-vendor.mk)
