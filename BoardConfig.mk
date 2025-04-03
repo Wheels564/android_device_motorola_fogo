@@ -17,6 +17,9 @@ ODM_MANIFEST_SKUS += dn n
 ODM_MANIFEST_DN_FILES := $(DEVICE_PATH)/sku/manifest_dn.xml
 ODM_MANIFEST_N_FILES := $(DEVICE_PATH)/sku/manifest_n.xml
 
+# GMS
+WITH_GMS := true
+
 # Kernel
 BOARD_KERNEL_CMDLINE += androidboot.hab.product=fogo
 TARGET_KERNEL_CONFIG += vendor/ext_config/moto-holi-fogo.config
