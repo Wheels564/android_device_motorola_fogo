@@ -274,7 +274,6 @@ vendor/etc/sensors/config/bmp5_0.json
 vendor/etc/sensors/config/icm4x6xa.json
 vendor/etc/sensors/config/icp201xx_0.json
 vendor/etc/sensors/config/mot_camgest.json
-vendor/etc/sensors/config/mot_tap.json
 vendor/etc/sensors/config/sns_amd.json
 vendor/etc/sensors/config/sns_amd_sw_disabled.json
 vendor/etc/sensors/config/sns_amd_sw_enabled.json

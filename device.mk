@@ -23,11 +23,12 @@ $(call inherit-product, device/motorola/sm6375-common/common.mk)
 
 # Overlays
 PRODUCT_PACKAGES += \
-    FrameworksResFogo \
-    LineageSystemUIFogo \
-    ProductFrameworksResFogo \
-    SystemUIResFogo \
-    WifiResFogo
+    FrameworksResDevice \
+    LineagePlatformDevice \
+    LineageSystemUIDevice \
+    ProductFrameworksResDevice \
+    SystemUIResDevice \
+    WifiResDevice
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -41,6 +42,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     init.mmi.overlay.rc \
     init.oem.fingerprint2.sh
+
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light-service.lineage
 
 # NFC
 PRODUCT_PACKAGES += \

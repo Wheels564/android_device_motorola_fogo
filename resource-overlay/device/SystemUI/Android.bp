@@ -4,6 +4,6 @@
 //
 
 runtime_resource_overlay {
-    name: "SystemUIResFogo",
+    name: "SystemUIResDevice",
     vendor: true,
 }
