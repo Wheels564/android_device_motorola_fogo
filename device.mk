@@ -24,19 +24,29 @@ $(call inherit-product, device/motorola/sm6375-common/common.mk)
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworksResDevice \
+    LineageApertureAppDevice \
     LineagePlatformDevice \
-    LineageSystemUIDevice \
     ProductFrameworksResDevice \
     SystemUIResDevice \
     WifiResDevice
 
 # Audio
+PRODUCT_PACKAGES += \
+    audio_amplifier.lahaina \
+    firmware_aw_cali.bin_symlink
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_io_policy.conf \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     $(LOCAL_PATH)/audio/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     $(LOCAL_PATH)/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
+
+# FM
+TARGET_HAS_FM := true
+
+PRODUCT_PACKAGES += \
+    FM2
 
 # Init
 PRODUCT_PACKAGES += \
@@ -63,9 +73,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml
 
 # Sensors
-PRODUCT_PACKAGES += \
-    sensors.fogo
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 

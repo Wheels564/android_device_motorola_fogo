@@ -8,6 +8,9 @@ DEVICE_PATH := device/motorola/fogo
 # Inherit from motorola sm6375-common
 include device/motorola/sm6375-common/BoardConfigCommon.mk
 
+# Audio
+AUDIO_FEATURE_ENABLED_EXT_AMPLIFIER := true
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := fogo
 
@@ -34,21 +37,25 @@ BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD)
 BOARD_MOT_DP_GROUP_SIZE := 5901385728 # (BOARD_SUPER_PARTITION_SIZE - 4MB)
 BOARD_SUPER_PARTITION_SIZE := 5905580032
 
+# Power
+TARGET_TAP_TO_WAKE_NODE := /sys/class/touchscreen/primary/gesture
+
 # Properties
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
 TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/system_ext.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Recovery
+TARGET_RECOVERY_DENSITY := hdpi
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 90
 
 # Security
-BOOT_SECURITY_PATCH := 2025-02-01
+BOOT_SECURITY_PATCH := 2025-04-01
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
 # Verified Boot
-BOARD_AVB_ROLLBACK_INDEX := 11
-BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := 11
+BOARD_AVB_ROLLBACK_INDEX := 13
+BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := 13
 
 # inherit from the proprietary version
 include vendor/motorola/fogo/BoardConfigVendor.mk

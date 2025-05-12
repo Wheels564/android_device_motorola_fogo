@@ -1,4 +1,4 @@
-# All unpinned blobs are extracted from fogos_g U1UGS34.23-110-23-4
+# All unpinned blobs are extracted from fogos_g U1UFNS34.41-98-3-16
 
 # ACDB Data
 vendor/etc/acdbdata/Bluetooth_cal.acdb
