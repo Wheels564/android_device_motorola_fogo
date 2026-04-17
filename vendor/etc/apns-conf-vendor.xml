@@ -1,0 +1,14 @@
+<apns>
+    <apn>
+        <mcc>311</mcc>
+        <mnc>480</mnc>
+        <apn-name>us-mobile</apn-name>
+        <protocol>IPv4</protocol>
+    </apn>
+    <ims>
+        <mcc>311</mcc>
+        <mnc>480</mnc>
+        <apn-name>ims</apn-name>
+        <protocol>IPv4</protocol>
+    </ims>
+</apns>
