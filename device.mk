@@ -85,11 +85,6 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
-
-# IMS/VoWiFi Configuration for US Mobile Warp (MCC 311 / MNC 480)
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/vendor/etc/apns-conf-vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/apns-conf-vendor.xml \
-    $(LOCAL_PATH)/vendor/etc/CarrierConfig/usmobile_311_480_carrierconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/CarrierConfig/usmobile_311_480_carrierconfig.xml
-
+ 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/motorola/fogo/fogo-vendor.mk)
