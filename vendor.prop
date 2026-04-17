@@ -53,50 +53,11 @@ persist.vendor.nfc.config_file_name=libnfc-SN220-UICC.conf
 ro.vendor.radio.imei.sv=1
 
 # IMS/VoWiFi Configuration for US Mobile Warp (MCC 311 / MNC 480)
-
-# Enable IMS Stack
 persist.sys.ims.registration=1
-persist.sys.ims.allow_roaming=true
-persist.sys.ims.prefer_ims=true
-
-# VoWiFi/WiFi Calling
 persist.radio.vowifi=1
 persist.radio.vowifi_mode_user_set=1
 persist.radio.vowifi_mode_user_pref=2
-persist.sys.wfc_mode=2
 persist.vendor.wfc.feature_enabled=1
-
-# IMS Domain
-persist.sys.ims.domain=ims.uscc.net
-
-# E911 Address Provisioning
-persist.vendor.ims.e911_provisioned=0
-
-# APN Configuration
-persist.radio.apn_sel_by_default=1
-persist.vendor.apn.use_static_config=1
-
-# Enhanced Calling Features
 persist.radio.ims_enabled=1
 persist.radio.volte=1
 persist.radio.vt=1
-
-# Force APN visibility and selection on Android 16
-ro.telephony.apn_default_enforced=1
-ro.telephony.apn_list_version=1
-persist.vendor.apn.show=1
-ro.telephony.apn_list_override=true
-
-# Explicitly set IMS APN
-persist.radio.apn_preferred_for_ims=ims
-persist.radio.apn_preferred_for_default=pwg
-
-# Force WFC calling routing
-persist.radio.wfc_voice_over_wifi_roaming=1
-persist.radio.wfc_voice_over_wifi=1
-persist.radio.calls_playout_delay=0
-persist.radio.ims_audio_enabled=true
-
-# IMS Registration and provisioning
-persist.radio.ims_reg_delay=0
-persist.radio.ims_dereg_delay=0
