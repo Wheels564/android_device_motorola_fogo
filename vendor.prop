@@ -80,3 +80,23 @@ persist.vendor.apn.use_static_config=1
 persist.radio.ims_enabled=1
 persist.radio.volte=1
 persist.radio.vt=1
+
+# Force APN visibility and selection on Android 16
+ro.telephony.apn_default_enforced=1
+ro.telephony.apn_list_version=1
+persist.vendor.apn.show=1
+ro.telephony.apn_list_override=true
+
+# Explicitly set IMS APN
+persist.radio.apn_preferred_for_ims=ims
+persist.radio.apn_preferred_for_default=pwg
+
+# Force WFC calling routing
+persist.radio.wfc_voice_over_wifi_roaming=1
+persist.radio.wfc_voice_over_wifi=1
+persist.radio.calls_playout_delay=0
+persist.radio.ims_audio_enabled=true
+
+# IMS Registration and provisioning
+persist.radio.ims_reg_delay=0
+persist.radio.ims_dereg_delay=0
