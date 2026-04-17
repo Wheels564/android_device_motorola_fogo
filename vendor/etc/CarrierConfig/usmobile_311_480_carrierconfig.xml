@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-FileCopyrightText: The LineageOS Project
+    SPDX-License-Identifier: Apache-2.0
+    
+    US Mobile Warp (MCC 311 / MNC 480) CarrierConfig
+-->
+<CarrierConfig>
+    <!-- IMS/VoWiFi Feature Enablement -->
+    <Boolean name="carrier_ims_gba_required_bool">false</Boolean>
+    <Boolean name="carrier_volte_available_bool">true</Boolean>
+    <Boolean name="carrier_vt_available_bool">true</Boolean>
+    <Boolean name="carrier_wfc_ims_available_bool">true</Boolean>
+    <Boolean name="carrier_wfc_over_wifi_supported_bool">true</Boolean>
+    
+    <!-- VoWiFi Entitlement Server Configuration -->
+    <String name="ims_entitlement_server_url_string">https://entitlement.u-wireless.com/ims/provisioning</String>
+    <Boolean name="ims_entitlement_check_enabled_bool">true</Boolean>
+    
+    <!-- E911 Address Requirements -->
+    <Boolean name="ims_wfc_requires_e911_address_bool">true</Boolean>
+    
+    <!-- WFC Preferences -->
+    <Integer name="wfc_mode_home_int">2</Integer>
+    <Integer name="wfc_mode_roaming_int">2</Integer>
+    <String name="wfc_operator_error_url_string">https://www.u-wireless.com/wfc-help</String>
+    
+    <!-- IMS Configuration -->
+    <String name="ims_domain_name_string">ims.uscc.net</String>
+    <Boolean name="ims_mm_wave_enabled_bool">true</Boolean>
+    
+    <!-- RCS Configuration (Optional) -->
+    <Boolean name="ims_rcs_enabled_bool">false</Boolean>
+    
+    <!-- Enhanced Calling Features -->
+    <Boolean name="ims_call_forwarding_enabled_bool">true</Boolean>
+    <Boolean name="ims_call_waiting_enabled_bool">true</Boolean>
+    <Boolean name="ims_call_transfer_enabled_bool">true</Boolean>
+</CarrierConfig>
