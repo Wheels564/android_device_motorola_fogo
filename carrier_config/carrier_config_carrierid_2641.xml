@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carrier_config>
+    <!-- 1. Enable User Selection of Network Mode (5G/LTE/3G) -->
+    <boolean name="allow_change_preferred_network_type_bool" value="true" />
+
+    <!-- 2. Fix Roaming Indicator Off: Treat ALL Host Networks as HOME -->
+    
+    <!-- GSM Non-Roaming (LTE/5G) -->
+    <!-- Includes Verizon, T-Mobile, AND AT&T -->
+    <string-array name="gsm_nonroaming_networks_string_array">
+        <!-- Verizon (Warp) -->
+        <item value="311480" />
+        <item value="310004" />
+        <item value="310005" />
+        <item value="310006" />
+        
+        <!-- T-Mobile (Light Speed) -->
+        <item value="310260" />
+        <item value="310160" />
+        <item value="310200" />
+        <item value="310210" />
+        <item value="310220" />
+        <item value="310230" />
+        <item value="310240" />
+        <item value="310250" />
+        <item value="310270" />
+        <item value="310310" />
+        <item value="310490" />
+        <item value="310660" />
+        <item value="310800" />
+        
+        <!-- AT&T (Dark Star / Legacy) -->
+        <item value="310410" /> <!-- AT&T Primary -->
+        <item value="310280" /> <!-- AT&T Legacy -->
+        <item value="310030" /> <!-- AT&T Infrastructure -->
+        <item value="310150" /> <!-- AT&T Infrastructure -->
+        <item value="310170" /> <!-- AT&T Infrastructure -->
+        <item value="310070" /> <!-- AT&T Infrastructure -->
+    </string-array>
+
+    <!-- CDMA Non-Roaming (Fallback) -->
+    <string-array name="cdma_nonroaming_networks_string_array">
+        <item value="0-65535" />
+    </string-array>
+
+    <!-- 3. Enable VoLTE -->
+    <boolean name="volte_enabled_bool" value="true" />
+    <boolean name="carrier_volte_available_bool" value="true" />
+    <boolean name="carrier_volte_tty_supported_bool" value="false" />
+
+    <!-- 4. Enable VoWiFi (WiFi Calling) - TRIGGERS E911 SCREEN -->
+    <boolean name="carrier_wfc_ims_available_bool" value="true" />
+    <boolean name="carrier_wfc_supports_wifi_only_bool" value="true" />
+    <boolean name="carrier_default_wfc_ims_enabled_bool" value="false" />
+    <boolean name="carrier_default_wfc_ims_roaming_enabled_bool" value="false" />
+    
+    <!-- E911 Address Handling -->
+    <boolean name="show_wfc_emergency_address_carrier_app_bool" value="true" />
+    <string name="wfc_emergency_address_carrier_app_string">com.android.imsserviceentitlement/.WfcActivationActivity</string>
+
+    <!-- 5. Enable Video Calling (ViLTE) -->
+    <boolean name="carrier_vt_available_bool" value="true" />
+
+    <!-- 6. Default Network Mode -->
+    <int name="default_network_mode_int" value="22" />
+</carrier_config>   

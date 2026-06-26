@@ -42,6 +42,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     $(LOCAL_PATH)/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
 
+# CARRIER CONFIG FOR U.S. MOBILE
+PRODUCT_COPY_FILES += \
+    device/motorola/fogo/carrier_config/carrier_config_carrierid_2641.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierConfig/carrier_config_carrierid_2641.xml
+
 # FM
 TARGET_HAS_FM := true
 
