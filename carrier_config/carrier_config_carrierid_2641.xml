@@ -1,4 +1,4 @@
-<<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <carrier_config>
     <!-- 1. Enable User Selection of Network Mode (5G/LTE/3G) -->
     <boolean name="allow_change_preferred_network_type_bool" value="true" />
