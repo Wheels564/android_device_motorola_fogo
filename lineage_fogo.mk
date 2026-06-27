@@ -29,7 +29,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="fogo_g-user 15 V1UFNS35H.193-20-12 66040b-a80b154 release-keys MV-304" \
     BuildFingerprint=motorola/fogo_g/fogo:15/V1UFNS35H.193-20-12/66040b-a80b154:user/release-keys \
     DeviceProduct=fogo_g \
-    ro.build.description="fogo_g-user 15 V1UFNS35H.193-20-12 66040b-a80b154 release-keys" \
-    ro.product.model=moto\ g\ 5G\ -\ 2024 \
-    ro.product.brand=motorola \
-    ro.product.manufacturer=motorola
