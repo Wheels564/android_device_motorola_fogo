@@ -46,10 +46,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/motorola/fogo/carrier_config/carrier_config_carrierid_2641.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierConfig/carrier_config_carrierid_2641.xml
 
-#CarrierServices
-PRODUCT_PACKAGES += \
-    CarrierServices
-
 # FM
 TARGET_HAS_FM := true
 
