@@ -4,16 +4,13 @@
     <boolean name="allow_change_preferred_network_type_bool" value="true" />
 
     <!-- 2. Network Configuration: Treat ALL Host Networks as HOME -->
-    
-    <!-- GSM Non-Roaming (LTE/5G) -->
-    <!-- Includes Verizon, T-Mobile, AND AT&T -->
+    <!-- GSM Non-Roaming (LTE/5G) - Includes Verizon, T-Mobile, AND AT&T -->
     <string-array name="gsm_nonroaming_networks_string_array">
         <!-- Verizon -->
         <item value="311480" />
         <item value="310004" />
         <item value="310005" />
         <item value="310006" />
-        
         <!-- T-Mobile -->
         <item value="310260" />
         <item value="310160" />
@@ -28,7 +25,6 @@
         <item value="310490" />
         <item value="310660" />
         <item value="310800" />
-        
         <!-- AT&T -->
         <item value="310410" />
         <item value="310280" />
@@ -55,30 +51,30 @@
     <boolean name="carrier_volte_available_bool" value="true" />
     <boolean name="carrier_volte_tty_supported_bool" value="false" />
 
-    <!-- 4. Enable VoWiFi (WiFi Calling) - microG Compatibility Attempt -->
+    <!-- 4. Enable VoWiFi (WiFi Calling) & E911 Prompt -->
     <boolean name="carrier_wfc_ims_available_bool" value="true" />
     <boolean name="carrier_wfc_supports_wifi_only_bool" value="true" />
     <boolean name="carrier_default_wfc_ims_enabled_bool" value="false" />
     <boolean name="carrier_default_wfc_ims_roaming_enabled_bool" value="false" />
     
-    <!-- E911 Address Handling -->
+    <!-- E911 Address Handling (Triggers the setup screen) -->
     <boolean name="show_wfc_emergency_address_carrier_app_bool" value="true" />
     <string name="wfc_emergency_address_carrier_app_string">com.android.imsserviceentitlement/.WfcActivationActivity</string>
 
     <!-- 5. Enable Video Calling (ViLTE) -->
     <boolean name="carrier_vt_available_bool" value="true" />
 
-    <!-- 6. IMS Configuration for microG/crDroid -->
+    <!-- 6. IMS Configuration (Fixed for SM6375) -->
     <!-- Force IMS registration - prevents IMS from being disabled -->
     <boolean name="carrier_allow_turnoff_ims_bool" value="false" />
     
     <!-- GAB (Global Address Book) configuration -->
     <string name="carrier_ims_gab_default_prefixes_string">+</string>
     
-    <!-- IMS Feature Tags for microG -->
-    <string name="carrier_ims_feature_tag_string">+g.3gpp.icsi-ref="urn%3Aurn-7%3A3gpp-service.ims.icsi.mmtel"</string>
+    <!-- REMOVED: carrier_ims_feature_tag_string was malformed and breaking IMS registration -->
 
-    <!-- 7. Default Network Mode -->
-    <!-- 22 = LTE + 5G (5G NSA preferred) -->
-    <int name="default_network_mode_int" value="33" />
-</carrier_config>
+    <!-- 7. Default Network Mode (CORRECTED) -->
+    <!-- 22 = LTE + 5G (NSA preferred) - Standard for SM6375 -->
+    <!-- DO NOT USE 33 (Invalid/Undefined) -->
+    <int name="default_network_mode_int" value="22" />
+</carrier_config>   
