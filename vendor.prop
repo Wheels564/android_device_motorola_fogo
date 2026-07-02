@@ -19,6 +19,9 @@ vendor.display.svi.config_path=/vendor/etc/SVIConfig.xml
 # Fingerprint
 vendor.false_touch_quality=38
 
+# Maintainer
+ro.crdroid.maintainer=Wheels564
+
 # NFC
 persist.vendor.nfc.config_file_name=libnfc-SN220-UICC.conf
 
