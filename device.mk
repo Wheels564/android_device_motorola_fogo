@@ -64,10 +64,6 @@ PRODUCT_PACKAGES += \
 # LiveDisplay
 $(call soong_config_set_bool,livedisplay_sysfs,enable_ab,true)
 
-# Maintainer
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.crdroid.maintainer=Wheels564   
-
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc-service.nxp \
