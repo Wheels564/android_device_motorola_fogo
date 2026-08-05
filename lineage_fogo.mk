@@ -14,6 +14,9 @@ $(call inherit-product, device/motorola/fogo/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Inherit some common PARTNER_GMS stuff.
+$(call inherit-product, vendor/partner_gms/products/gms.mk)
+
 PRODUCT_NAME := lineage_fogo
 PRODUCT_DEVICE := fogo
 PRODUCT_MANUFACTURER := motorola
